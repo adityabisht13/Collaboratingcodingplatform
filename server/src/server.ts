@@ -13,12 +13,7 @@ const app = express()
 
 app.use(express.json())
 
-app.use(cors({
-	origin: ["https://deploy-mern-1whq.vercel.app"],
-	methods: ["POST" , "GET"],
-	credentials: true
-      }
-	    ));
+app.use(cors())
 
 app.use(express.static(path.join(__dirname, "public"))) // Serve static files
 
